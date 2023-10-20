@@ -1,7 +1,9 @@
 1. Создание базовой структуры проекта(main.py, app.py, view.py, models.py, forms.py, config.py, db.py)
-2. создание папки templates(размещение вне корневой папки проекта с подключение пути в app.py)
+2. создание папки templates(размещение вне корневой папки проекта с подключением пути в app.py)
 3. импортирование render_template в views.py для отдачи html-шаблонов
 4. <a href='{{ url_for("index") }}'>Главная</a> - создание динамических ссылок на каждую страницу
 5. Создание блоков на jinja {% название блока %} {% endblock %}
 6. Наследование от главного шаблона {% extends 'название шаблона' %}
-
+7. В файле app.py прописывам путь к папке templates(template_folder="../templates")
+8. создание в templates папки include с микрошаблонами(main_menu.html, login_service.html и другие)
+9. Создание динамической страницы one_service.html для каждой услуги с подключением во view.py

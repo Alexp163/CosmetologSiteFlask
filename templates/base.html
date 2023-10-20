@@ -2,9 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>{% block page_title %} Cosmetolog {% endblock %}</title>
 </head>
 <body>
+
+<h1>{% block h1_title %} CosmetologSite{% endblock %}</h1>
+
+{% block content %}
+{% include "include/main_menu.html"%}
+{% endblock %}
 
 </body>
 </html>

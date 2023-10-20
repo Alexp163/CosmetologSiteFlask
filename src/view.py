@@ -19,4 +19,9 @@ def login():
 
 @app.route('/registration')
 def registration():
-    return render_template(registration.html)
+    return render_template('registration.html')
+
+
+@app.route('/procedur/1')
+def one_procedur():
+    return render_template('one_procedur.html')

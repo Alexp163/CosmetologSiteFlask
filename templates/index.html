@@ -1,10 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends "base.html" %}
 
-</body>
-</html>
+{% block page_title %} {{ super() }} - С заботой о каждом пациенте {% endblock %}
+
+{% block h1_title %} Жду вас на своем приеме {% endblock %}
+
+{% block content %}
+{{ super() }}
+<p>
+Для записи на прием не забудьте зарегистрироваться или пройти авторизацию, если вы зарегистрированы
+</p>
+
+{% endblock %}

@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block page_title %} С заботой о каждом пациенте {% endblock %}
+
+{% block h1_title %} Мы проводим лечение по следующим направлениям {% endblock %}
+
+{% block content %}
+
+{{ super() }}
+{% include "include/type_service.html" %}
+{% endblock %}

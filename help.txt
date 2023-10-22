@@ -12,3 +12,6 @@
 12. прописывание пути к папке db.py
 (app.config["SQLALCHEMY_DATABASE_URL"] = "sqlite:///slite.db")
 13. создание таблицы с параметрами продукта(комментарии в начале models.py)
+14. в класс добавлен аргумент CosmetologiService(db.Model)(файл models.py)
+15. в db_run.py добавляем with app.app_context(): db.drop_all(), db.create_all()
+

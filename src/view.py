@@ -1,5 +1,6 @@
 from app import app
 from flask import render_template
+from db_run import cosmetolog
 
 
 @app.route('/')
@@ -9,7 +10,7 @@ def index():
 
 @app.route('/our_service')
 def our_service():
-    return render_template('our_service.html')
+    return render_template('our_service.html', cosmetolog=cosmetolog)
 
 
 @app.route('/login')

@@ -1,6 +1,6 @@
 {% for c in cosmetolog %}
 <p>
-    <p>Раздел:</p><a href="#">{{ c.chapter }}</a>
+    <p>Раздел:</p><a href="{{ url_for('one_procedur', cosmetology_service_id=c.id)}}">{{ c.chapter }}</a>
     <div>Услуга {{ c.name_service }}; показания: {{ c.medical_indications }}; противопоказания: {{ c.contraindications }};
     используемый препарат: {{ c.medication }}; цена: {{ c.price }}</div>
 </p>

@@ -24,6 +24,7 @@ def registration():
     return render_template('registration.html')
 
 
-@app.route('/procedur/1')
-def one_procedur():
-    return render_template('one_procedur.html')
+@app.route('/procedur/<int:cosmetology_service_id>')
+def one_procedur(cosmetology_service_id):
+    cosmetology_service = CosmetologyService.query.get(cosmetology_service_id)
+    return render_template('one_procedur.html', cosmetology_service=cosmetology_service)

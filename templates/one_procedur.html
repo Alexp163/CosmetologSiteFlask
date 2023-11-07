@@ -7,8 +7,13 @@
 {% block content %}
 
 {{ super() }}
-<p>Мезотерапия</p>
-{% include "include/type_procedure.html" %}
-
+<div>
+    <p>Раздел {{ cosmetology_service.chapter }}</p>
+    <p>Наименование услуги косметолога {{ cosmetology_service.name_service }}</p>
+    <p>Показания для применения услуги {{ cosmetology_service.medical_indications }}</p>
+    <p>Противопоказания {{ cosmetology_service.contraindications }}</p>
+    <p>Препараты для выполнения {{ cosmetology_service.medication }}</p>
+    <p>Цена препарата {{ cosmetology_service.price }}</p>
+</div>
 
 {% endblock %}

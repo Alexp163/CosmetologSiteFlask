@@ -28,6 +28,12 @@ class CosmetologyService(db.Model):
     medication = db.Column(db.Text()) # препараты для выполнения
     price = db.Column(db.Float()) # цена продукта
 
+    def __repr__(self):
+        return (f"<Раздел: {self.chapter}, наименование услуги: {self.name_service}, "
+                f"показания для применения: {self.medical_indications}, "
+                f"противопоказания: {self.contraindications}, препараты выбора: {self.medication} "
+                f", цена услуги: {self.price}>")
+
 
 class Service(db.Model):
     __tablename__ = "service"
@@ -41,6 +47,10 @@ class Service(db.Model):
     service_group_id = db.Column(db.ForeignKey("service_group.id"))  # id группы, к которой относится эта услуга
     service_group = db.Relationship("ServiceGroup")  # ссылка на группу(id которой указан в вышестоящей строчке)
 
+    def __repr__(self):
+        return (f"<Наименование услуги: {self.name_service}, описание услуги: {self.description},"
+                f" исполнитель: {self.executor}, цена услуги: {self.price}>")
+
 
 class ServiceGroup(db.Model):
     __tablename__ = "service_group"
@@ -49,3 +59,6 @@ class ServiceGroup(db.Model):
     name = db.Column(db.String(100))
     description = db.Column(db.Text())
     # создать руководителя группы
+
+    def __repr__(self):
+        return f"<Название группы: {self.name}, описание группы: {self.description}>"

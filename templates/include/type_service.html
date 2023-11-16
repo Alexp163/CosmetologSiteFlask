@@ -1,14 +1,8 @@
-<h1>Наши услуги</h1>
+{% for sg in service_groups %}
+
 <p>
-  <a href="#">Инъекционная косметология</a>
+  Тип сервиса: <a href="{{ url_for('service_group', service_group_id=sg.id) }}">{{ sg.name }}</a>
 </p>
-<p>
-  <a href="#">Дерматология</a>
-</p>
-<p>
-  <a href="#">Аппаратная косметология</a>
-</p>
-<p>
-  <a href="#">Удаление новообразований</a>
-</p>
+{% endfor %}
+
 

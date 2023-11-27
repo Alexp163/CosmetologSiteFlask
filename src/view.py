@@ -1,6 +1,6 @@
-from src.app import app
+from app import app
 from flask import render_template
-from src.models import CosmetologyService, ServiceGroup, Service
+from models import CosmetologyService, ServiceGroup, Service
 
 
 @app.route('/')

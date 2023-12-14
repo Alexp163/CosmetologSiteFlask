@@ -1,5 +1,5 @@
 from app import app
-from flask import render_template
+from flask import render_template, flash
 from models import CosmetologyService, ServiceGroup, Service
 from forms import LoginForm, RegisterForm
 
@@ -15,15 +15,21 @@ def our_service():
     return render_template('our_service.html', cosmetolog=cosmetolog)
 
 
-@app.route('/login')
+@app.route('/login', methods=["GET", "POST"])
 def login():
     form = LoginForm()
+    if form.validate_on_submit():
+        print("Кнопка нажата!!!")
+        flash("Кнопка нажата")
     return render_template('login.html', form=form)
 
 
-@app.route('/registration')
+@app.route('/registration', methods=["GET", "POST"])
 def registration():
     form = RegisterForm()
+    if form.validate_on_submit():
+        print("Кнопка нажата!!!")
+        flash("Кнопка нажата")
     return render_template('registration.html', form=form)
 
 
